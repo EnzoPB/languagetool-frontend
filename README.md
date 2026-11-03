@@ -1,7 +1,7 @@
 # LanguageTool frontend
 Simple pure HTML frontend for the [LanguageTool open-source API](https://dev.languagetool.org/http-server)
 
-![screenshot](https://github.com/user-attachments/assets/a3285b52-a87e-47da-a648-d50b9eb14286)
+![screenshot](https://github.com/user-attachments/assets/b210a0e3-79f4-42e3-b0ae-c0244bc8febd)
 
 
 ## Installation
