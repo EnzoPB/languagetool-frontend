@@ -65,8 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 						text.setSelectionRange(match.offset, match.offset + match.length);
 					}
 					createElement('a', { href: 'javascript:void(0)', onclick: locate }, 'Locate', matchEl);
+					function ignore() {
+						let match = currentMatches[i];
+						matchEl.remove();
+					}
+					createElement('a', { href: 'javascript:void(0)', onclick: ignore }, 'Ignore', matchEl);
 					let replacementsEl = createElement('ul', null, null, matchEl);
-					for (let replacement of match.replacements) {
+					for (const [replacement_index, replacement] of match.replacements.entries()) {
+						if (replacement_index == 5) { break; }
 						let replacementEl = createElement('li', null, null, replacementsEl);
 						createElement('pre', null, replacement.value.trim(), replacementEl);
 						replacementEl.innerHTML += ' - ';
